@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>ChatJs</title>
+</head>
+<body>
+	<p id="caption"><b>GoMassage</b></p>
+	<table>
+		<tr>
+			<td>
+			    <input type="text" name="pesan" id="pesan" style="height: 20px;">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button id="send" onclick="chatbox()" style="height: 35px;">send</button>
+			</td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+	
+	function chatbox() {
+		
+		let x = document.getElementById('pesan').value;
+		let y  = document.getElementById('caption');
+		
+		y.innerHTML = y.innerHTML + "<br>" + x;
+	}
+</script>
+
+</body>
+</html>

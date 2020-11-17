@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Konversi matauang</title>
+</head>
+<body>
+<br>
+<h1>Web Konversi Mata Uang</h1><br>
+<table border="1">
+	<tr>
+	<td align="center"><br><br>
+		<div class="container">
+			<form id="form1" name="form1" onsubmit="return false">
+				<select id="matauang" class="form-control" >
+				  	<option value="a">Indonesia-Rupiah</option>
+				  	<option value="b">Inggris-Poundsterling</option>
+				  	<option value="c">Amerika-Dollar</option>
+				</select>
+
+			</form>
+		<br><input id="nominal" class="form-control" type="text" placeholder="Nominal" name=""><br><br>
+			<input type="button" class="btn btn-success" onclick="hitung()" name="" value="Hitung">
+	</td>
+	<td align="center"><br><br>
+		<div class="container">
+			<form id="form2" name="form2" onsubmit="return false">
+				<select id="matauang1" class="form-control">
+				  	<option value="a">Indonesia-Rupiah</option>
+				  	<option value="b">Inggris-Poundsterling</option>
+				  	<option value="c">Amerika-Dollar</option>
+				</select>
+			</form>
+			<br>
+		<p id="output"></p>
+		
+	</td>
+
+	</tr>
+</table>
+
+<script type="text/javascript">
+
+	function hitung() {
+		
+		var mata_uang = document.getElementById('form1').matauang.value;
+		var tukar_uang = document.getElementById('form2').matauang1.value;
+		var masukan = parseFloat(nominal.value);
+
+		if (mata_uang == "c" && tukar_uang == "a") {
+
+			var hasil = masukan * 13992 ;
+			document.getElementById("output").innerHTML = hasil;
+
+		} else if (mata_uang == "b" && tukar_uang == "a") {
+
+			hasil = masukan * 18838;
+			document.getElementById("output").innerHTML = hasil;
+
+		}else if (mata_uang == "b" && tukar_uang == "c") {
+
+			hasil = masukan * 0.74;
+			document.getElementById("output").innerHTML = hasil;
+
+		}else if (mata_uang == "a" && tukar_uang == "b") {
+			
+			hasil = masukan * 0.000053;
+			document.getElementById("output").innerHTML = hasil; 
+
+		} else if (mata_uang == "a" && tukar_uang == "c") {
+
+			hasil = masukan * 0.000071;
+			document.getElementById("output").innerHTML = hasil;
+			
+		} else if (mata_uang == "c" && tukar_uang == "b") {
+
+			hasil = masukan * 0.75;
+			document.getElementById("output").innerHTML = hasil;
+
+		} 
+
+	}
+
+
+</script>
+
+</body>
+</html>
